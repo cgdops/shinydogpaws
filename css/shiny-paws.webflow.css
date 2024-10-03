@@ -141,12 +141,16 @@ li {
 }
 
 .brand {
-  background-color: #f0f0f0;
+  background-color: var(--primary);
   border-radius: 50%;
   padding: 0;
   position: absolute;
   top: 10px;
   overflow: hidden;
+}
+
+.brand.w--current {
+  padding: 10px;
 }
 
 .nav-menu {
@@ -332,8 +336,8 @@ li {
   background-color: var(--primary);
   color: #fff;
   border-radius: 20px;
-  margin-top: 30px;
-  padding: 25px 30px;
+  margin-top: 0;
+  padding: 6px 30px 15px;
   position: sticky;
   top: 20%;
 }
@@ -373,6 +377,7 @@ li {
 .inner-page-paragraph {
   padding-top: 25px;
   font-size: 1.6em;
+  display: block;
 }
 
 .image-3 {
@@ -448,7 +453,11 @@ li {
   }
 
   .display-heading {
-    font-size: 3em;
+    font-size: 2.4em;
+  }
+
+  .display-heading.nopadd {
+    font-size: 4.2em;
   }
 
   .navlink {
@@ -482,14 +491,77 @@ li {
     line-height: 1em;
   }
 
+  .aboutsection {
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .aboutsection.bg {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .paragraph {
+    font-size: 1.4em;
+  }
+
+  .grid {
+    grid-template-columns: 1.75fr;
+  }
+
+  .display-paragrapg {
+    font-size: 1.4em;
+  }
+
+  .grid-2 {
+    grid-column-gap: 19px;
+  }
+
+  .quick-book-form {
+    border-radius: 7px;
+    padding: 5px 16px;
+  }
+
   .secondary-button.large {
     background-color: var(--primary);
     color: var(--white);
     font-weight: 500;
   }
 
+  .heading {
+    font-size: 1.8em;
+  }
+
+  .service-plist {
+    font-size: 1em;
+  }
+
+  .footer {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
   .dropdown {
     margin-left: -37px;
+  }
+
+  .heading-2 {
+    margin-top: 10px;
+    font-size: 2.6em;
+  }
+
+  .heading-3 {
+    font-size: 2.6em;
   }
 }
 
@@ -512,7 +584,11 @@ li {
 
   .display-heading {
     margin-bottom: 10px;
-    font-size: 4.6em;
+    font-size: 3.6em;
+  }
+
+  .display-heading.nopadd {
+    font-size: 3em;
   }
 
   .cover-image {
@@ -536,8 +612,20 @@ li {
     padding-bottom: 25px;
   }
 
+  .aboutsection.bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .aboutsection.footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .services-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .intro-content {
@@ -566,6 +654,10 @@ li {
     padding-top: 0;
   }
 
+  .grid-2 {
+    grid-template-columns: 1.75fr;
+  }
+
   .grid-3 {
     grid-template-rows: auto;
     grid-template-columns: 1fr;
@@ -586,12 +678,24 @@ li {
   }
 
   .nav-menu {
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    display: block;
   }
 
   .display-heading {
-    font-size: 3.2em;
+    font-size: 2.8em;
     line-height: 1.2em;
+  }
+
+  .display-heading.hero {
+    font-size: 3.2em;
+  }
+
+  .navlink {
+    width: 100%;
+    display: block;
   }
 
   .quick-stack {
@@ -606,6 +710,9 @@ li {
   .primary-button.large {
     background-color: var(--primary);
     color: var(--white);
+    text-align: left;
+    flex: 1;
+    display: block;
   }
 
   .icon {
@@ -614,6 +721,14 @@ li {
 
   .image-2 {
     width: 100%;
+  }
+
+  .aboutsection.footer {
+    padding-bottom: 75px;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
   }
 
   .intro-content {
@@ -625,8 +740,17 @@ li {
     padding-top: 30px;
   }
 
+  .servicessection {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+
   .service-heading {
     font-size: 1.6em;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 
   .display-paragrapg {
@@ -637,6 +761,12 @@ li {
   .secondary-button.large {
     background-color: var(--primary);
     color: var(--white);
+  }
+
+  .inner-page-paragraph {
+    padding-top: 10px;
+    font-size: 1.4em;
+    display: none;
   }
 
   .heading {
@@ -659,6 +789,34 @@ li {
     display: block;
     position: fixed;
     inset: auto 0% 0%;
+  }
+
+  .footer {
+    grid-template-columns: 1.5fr;
+  }
+
+  .dropdown {
+    margin-left: 0;
+    display: block;
+  }
+
+  .heading-2 {
+    font-size: 2em;
+  }
+
+  .heading-3 {
+    font-size: 1.6em;
+  }
+
+  .body {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: start;
+  }
+
+  .body-2, .body-3 {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 }
 
@@ -683,7 +841,7 @@ li {
   place-self: center stretch;
 }
 
-#w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-4ce83365, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-3d8adf59, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-855de8ca, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-a4993b55, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-c58f9978, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-2a611cae, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-836eec91, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-d83a015c, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-0fbfc188, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-b69171ab, #w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-d85556e8 {
+#w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-4ce83365, #w-node-_6045b7a4-eefd-c75d-5a2f-fd2f7d886cb7-7d886cb7 {
   align-self: start;
 }
 
@@ -697,7 +855,16 @@ li {
 }
 
 @media screen and (max-width: 991px) {
-  #w-node-_7564f363-26e1-1904-1e9a-d3e69964dcfb-1898cf88, #w-node-_7564f363-26e1-1904-1e9a-d3e69964dcfb-29fa45bc {
+  #w-node-_7564f363-26e1-1904-1e9a-d3e69964dcfb-1898cf88 {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #w-node-a77ce03a-eb79-1073-8d7a-aaa2e9fa09f3-e9fa09d1 {
+    grid-area: span 1 / span 2 / span 1 / span 2;
+  }
+
+  #w-node-_7564f363-26e1-1904-1e9a-d3e69964dcfb-29fa45bc {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
   }
@@ -709,13 +876,19 @@ li {
     grid-template-columns: 1fr;
   }
 
-  #w-node-ae6c901e-0cd6-cf0b-8a78-4e8454e42703-1898cf88 {
-    grid-column: span 1 / span 1;
+  #w-node-ae6c901e-0cd6-cf0b-8a78-4e8454e42703-1898cf88, #w-node-_8aaa123e-2e36-2c2b-6bd0-15c2a8e3267c-3d8adf59 {
+    grid-area: span 1 / span 1 / span 1 / span 1;
   }
 
   #w-node-_7564f363-26e1-1904-1e9a-d3e69964dcfb-29fa45bc {
     grid-template-rows: auto;
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #w-node-_4458b8e6-6184-21da-7212-cb0c4419d6f4-1898cf88, #w-node-a77ce03a-eb79-1073-8d7a-aaa2e9fa09f3-e9fa09d1 {
+    grid-area: span 1 / span 1 / span 1 / span 1;
   }
 }
 
