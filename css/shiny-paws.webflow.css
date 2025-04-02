@@ -860,6 +860,10 @@ li {
   grid-template-columns: 1fr 1fr;
 }
 
+#w-node-_8f8aebff-d8c8-63a5-e8c5-39099fc6f975-f70e231c {
+  align-self: start;
+}
+
 @media screen and (max-width: 991px) {
   #w-node-_7564f363-26e1-1904-1e9a-d3e69964dcfb-1898cf88 {
     grid-template-rows: auto;
